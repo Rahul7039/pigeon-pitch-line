@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # Pigeon Pitch, One Line - make.fun one-line entry.
-# Prints exactly one line: the entry text, nothing else.
+# A city pigeon pitches investors: drones are expensive overhead,
+# pigeons already own the rooftops and run on crumbs - so even the
+# startup's burn rate is crumbs. Prints exactly one line, nothing else.
 # Deterministic, standard library only, no network, no randomness.
 
 import os
 
-LINE = 'Drones need charging, permits and a pilot; we run on crumbs and already own every rooftop in the city. Coo.ly: same-day crumb delivery, now raising crumbs.'
+LINE = "Drones need charging, permits and a pilot; we run on crumbs and already own every rooftop. Coo.ly: same-day crumb delivery, burn rate: crumbs."
 
 
 def main() -> None:
