@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-# Pigeon Pitch, One Line - make.fun one-line entry.
-# A city pigeon pitches investors: drones are expensive overhead,
-# pigeons already own the rooftops and run on crumbs - so even the
-# startup's burn rate is crumbs. Prints exactly one line, nothing else.
+# Pigeon Pitch, One Line - make.fun entry.
+# A city pigeon pitches investors for its startup, Coo.ly: drones are
+# expensive overhead (charging, permits, a pilot), while pigeons run on
+# crumbs and already own every rooftop - so even the burn rate is crumbs.
+# Prints exactly one line and writes the same line to /output/entry.txt.
 # Deterministic, standard library only, no network, no randomness.
 
 import os
 
 LINE = "Drones need charging, permits and a pilot; we run on crumbs and already own every rooftop. Coo.ly: same-day crumb delivery, burn rate: crumbs."
+
+# Gate: the kit's sealed scorer accepts 1-200 characters. Fail loudly here
+# rather than shipping a line the gate would refuse.
+MAX_CHARS = 200
+assert 1 <= len(LINE) <= MAX_CHARS, "entry line outside the 1-200 char gate"
 
 
 def main() -> None:
